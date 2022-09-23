@@ -1,366 +1,142 @@
-html,
-body {
+*,
+*:before,
+*:after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  font-family: 'Montserrat', sans-serif;;
+}
+
+
+.resize-animation-stopper * {
+  animation: none !important;
+  transition: none !important;
+}
+
+button > * {
+  pointer-events: none;
+}
+.container {
+  margin: 0 auto;
+  max-width: 120rem;
+}
+
+/*==========*/
+/*NAVBAR*/
+/*==========*/
+
+.navbar {
+  display: flex;
+  position: relative;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+.navbar__logo {
+  font-size: 3rem;
+  padding: 0 2rem;
+}
+.navbar__links {
+  position: absolute;
+  top: 0;
+  transition: all 0.3s ease-in-out;
+  list-style: none;
+  width: 100%;
+  opacity: 0;
+}
+.navbar__links.active {
+  transform: translatey(7.5rem);
+  opacity: 1;
+}
+.navbar__links li a {
+  transition: background 0.3s ease-in-out;
+  height: 100%;
+  color: #666666;
+  display: block;
+  background-color: #ffffff;
+  font-size: 2.2rem;
+  width: 100%;
+  text-decoration: none;
+  padding: 2rem;
+  border-top: 1px solid #eeeeee;
+}
+.navbar__links li a:hover {
+  background-color: lightgray;
+}
+
+.hamburger {
+  position: relative;
+  display: block;
+  background: #ffffff;
+  padding: 2rem;
+  border: none;
+  cursor: pointer;
+}
+.hamburger__line {
+  background-color: #708090;
+  height: 0.5rem;
+  width: 3.5rem;
+  margin: 0.5rem;
+  transition: 0.3s ease-in-out;
+  border-radius: 2px;
+}
+.hamburger.active:hover .hamburger__line:nth-child(1), .hamburger.active .hamburger__line:nth-child(1) {
+  transform: translatey(1rem) rotate(45deg);
+  background-color: salmon;
+}
+.hamburger.active:hover .hamburger__line:nth-child(2), .hamburger.active .hamburger__line:nth-child(2) {
+  background: rgba(0, 0, 0, 0);
+}
+.hamburger.active:hover .hamburger__line:nth-child(3), .hamburger.active .hamburger__line:nth-child(3) {
+  transform: translatey(-1rem) rotate(-45deg);
+  background-color: salmon;
+}
+
+
+
+
+@media only screen and (min-width: 768px) {
+  /* For desktop: */
+  .navbar {
+    padding: 0 4rem;
+  }
+  .navbar__links {
+    transition: all 0.3s ease-in;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
     position: relative;
-    overflow-x: hidden;
-    scroll-behavior: smooth;
-    scroll-margin-top: 60px;
-}
-
-body {
-    background-size: auto;
-
-}
-
-.navbar {}
-
-h2 {
-    /*text-shadow: 1px 1px 1px #214173;
-*/
-}
-
-/* navigační bar*/
-.nav-link {
-    color: black;
-    font-size: 1em;
-    text-transform: uppercase;
-    padding: 5px 3px 5px 0px;
-}
-
-.nav-link:hover {
-    color: #1a75ff;
-}
-
-.navbar-brand {
-    color: black;
-}
-
-.titulniStrana {
-    color: #b3b3b3;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(imgs/back1.png);
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-position: center;
-    background-position: top;
-    background-size: cover;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-#titulniText {
-    font-size: min(1.75em, 5vh);
-
-    color: #fff;
-    text-shadow: 1px 1px 1px #000;
-}
-
-#autoskolalodenice {
-
+    opacity: 1;
+  }
+  .navbar__links li a {
     text-align: center;
-    padding-top: 20%;
-    padding-bottom: 22%;
-    font-size: 2em;
-    max-width: 100%;
-}
+  }
+  .navbar__links li a:hover {
+    background-color: lightgray;
+  }
+  .navbar__links.active {
+    transition: none;
+    display: none;
+  }
 
-#ONas {
-    text-align: center;
-    padding-top: 5%;
-    padding-bottom: 5%;
-    background: #f1f1f1;
-    font-size: 1.2em;
+  .hamburger {
+    display: none;
+  }
 }
-
-#Sluzby {
-    padding-top: 5%;
-    padding-bottom: 10%;
-    background: #e6e6e6;
-}
-
-#VycvikovaVozidla {
-    padding-top: 5%;
-    padding-bottom: 10%;
-    background: #f1f1f1;
-}
-
-#Tym {
-    text-align: center;
-    padding-top: 5%;
-    padding-bottom: 10%;
-    background: #e6e6e6;
-}
-
-#Kontakty {
-    text-align: center;
-    background: #f1f1f1;
-    padding-top: 5%;
-    padding-bottom: 5%;
-}
-
-#Kestazeni {
-    text-align: center;
-    padding-top: 5%;
-    padding-bottom: 11%;
-    background: #e6e6e6;
-}
-
-.photo-gallery .photos {
-    padding-bottom: 20px;
-}
-
-.photo-gallery .item {
-    padding-bottom: 1%;
-}
-
-#autaText {
-    font-size: 1.2em;
-    font-weight: bold;
-}
-
-#sluzbyText {
-    font-size: 1.1em;
-    margin-top: 5px;
-}
-
-#sluzby {}
-
-#sluzbyObrazek {
-    max-height: 150px;
-    max-width: 150px;
-}
-
-#collapseExample {
-    margin-top: 5px;
-}
-
-.ree ion-icon {
-    font-size: 64px;
-    padding-bottom: 15px;
-    padding-top: 25px;
-    color: #0099cc;
-}
-
-.cont ion-icon {
-    font-size: 25px;
-    color: #0099cc;
-}
-
-.modal-body li {
-    text-align: left;
-}
-
-.modal-body ul {
-    text-align: left;
-}
-
-.tcenter {
-    text-align: center;
-}
-
-.ree p {
-    font-size: 20px;
-}
-
-.maintext {
-    font-weight: 470;
-}
-
-.service {
-    margin: 10px;
-    padding: 10px;
-    border-radius: 1em;
-    background: #fff;
-    box-shadow: 0px 4px 24px rgba(0, 0, 0, 0.25);
-}
-
-.name {
-    font-size: 1.7em;
-    color: #ced6e0;
-    font-weight: 500;
-    text-transform: uppercase;
-}
-
-.btn {
-    margin: 5px;
-    /* background-color: #0099cc;
-*/
-}
-
-footer {
-    padding-top: 1%;
-    text-align: center;
-    background: #9e9e9d
-}
-
-#icons {
-    font-size: 25px;
-    padding-bottom: 15px;
-    display: inline-block;
-
-}
-
-#textInfo {
-    text-align: left;
-}
-
-.textKontakty {
-    font-size: 1.2em;
-}
-
-#iconsDownload {
-    font-size: 3em;
-}
-
-.downh {
-    color: black;
-}
-
-.downh:hover {
-    text-decoration: none;
-    color: blue;
-}
-
-.heading-line {
-    margin: 0 auto;
-    display: block;
-    height: 2px;
-    width: 140px;
-    background: #333;
-    margin-top: 10px;
-    margin-bottom: 20px;
-}
-/*Contact*/
-.contactSectionContent {}
-
-.contactPageText {
-    width: min(700px, 70vw);
-}
-
-.contactPerson {
-    padding: 2em;
-    border-radius: 1rem;
-    box-shadow: 0px 4px 24px rgba(0, 0, 0, 0.25);
-}
-.contactPersonImage{
-    width: 14rem;
-    height: 14rem;
-    border-radius: 50%;
-    object-fit: cover;
-}
-.contactSectionContent .gridWrapper{
-    max-width: 900px;
-    gap: 2.5em;
-}
-.contentLocationMaps{
-    font-size: 1.2rem;
-    opacity: 0.7;
-}
-.contactLocation{
-    padding-bottom: 1em;
-}
-.contactLocation .icon{
-    width: 4rem;
-    height: 4rem;
-}
-.contactPersonDetails{
-}
-.contactPersonContacs{
-    gap: min(1vw, 0.5em);
-}
-.d-flex-row {
-    display: flex;
-    flex-direction: row;
-}
-
-.d-flex-col {
-    display: flex;
-    flex-direction: column;
-}
-
-.content-center {
-    justify-content: center;
-    align-items: center;
-}
-.gridWrapper {
-    width: 1250px;
-    display: grid;
-    grid-auto-flow: column;
-    grid-auto-columns: 1fr;
-    align-items: center;
-    justify-content: center;
-    margin-inline: 2em;
-    gap: min(4vw, 200px);
-    grid-column: 1/3;
-}
-
-@media screen and (max-width : 450px) {
-    #autoskolalodenice {
-        width: 100%;
-        height: auto;
-        font-size: 1.5em;
-        overflow-x: hidden;
-    }
-}
-
-@media (min-width: 1700px) {
-    .titulniStrana {
-        background-size: cover;
-        height: 55vw;
-
-    }
-}
-
-/*Styling Opening Section*/
-@media screen and (max-width: 750px) {
-    .contactPerson{
-        display: flex;
-        flex-direction: row;
-        gap: 1em;
-
-    }
-    .contactPersonImage{
-        width: 25vw;
-        height: 25vw;
-    }
-
-}
-
-@media screen and (max-width: 600px) {
-    .gridWrapper {
-        width: 100vw;
-    }
-
-    .contactPerson,
-    .perk {
-        grid-column: 1;
-    }
-}
-@media screen and (max-width: 330px){
- .contactPerson{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    gap: 0.2em;
- }
- .contactSectionContent .gridWrapper{
-    gap: 1.2em;
- }
- .contactPersonImage{
-    width: 30vw;
-    height: 30vw;
-}
-
-.contactPersonDetails h3{
-    font-size: min(1.4rem, 20vw);
-}
-.contactPersonContacts .icon{
-    width: 5vw;
-    height: 5vw;
-}
-.contactPerconContactsPhone{
-    font-size: min(1rem, 5vw);
-}
+@media (hover: hover) and (pointer: fine) {
+  .hamburger:hover .hamburger__line {
+    background-color: #8d9aa6;
+  }
+  .hamburger:hover .hamburger__line:nth-child(1) {
+    transform: translatex(-1rem);
+    background-color: salmon;
+  }
+  .hamburger:hover .hamburger__line:nth-child(3) {
+    transform: translatex(-1rem);
+    background-color: salmon;
+  }
 }
