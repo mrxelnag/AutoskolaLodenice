@@ -17,14 +17,33 @@ html {
   transition: none !important;
 }
 
+
 button > * {
   pointer-events: none;
 }
+
+/*==========*/
+/*For ALL*/
+/*==========*/
+section :nth-child(1){
+    height: 100vh;
+    background-color: black;
+}
+section :nth-child(2){
+    
+}
+header {
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+  }
+/*==========*/
+/*UTILITY*/
+/*==========*/
+
 .container {
   margin: 0 auto;
   max-width: 120rem;
 }
-
+  
 /*==========*/
 /*NAVBAR*/
 /*==========*/
