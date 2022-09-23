@@ -1,0 +1,268 @@
+html,
+body {
+    position: relative;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    scroll-margin-top: 60px;
+}
+
+body {
+    background-size: auto;
+
+}
+
+.navbar {}
+
+h2 {
+    /*text-shadow: 1px 1px 1px #214173;
+*/
+}
+
+/* navigační bar*/
+.nav-link {
+    color: black;
+    font-size: 1em;
+    text-transform: uppercase;
+    padding: 5px 3px 5px 0px;
+}
+
+.nav-link:hover {
+    color: #1a75ff;
+}
+
+.navbar-brand {
+    color: black;
+}
+
+.titulniStrana {
+    color: #b3b3b3;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(imgs/back1.png);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    background-position: top;
+    background-size: cover;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#titulniText {
+    font-size: min(1.75em, 5vh);
+
+    color: #fff;
+    text-shadow: 1px 1px 1px #000;
+}
+
+#autoskolalodenice {
+
+    text-align: center;
+    padding-top: 20%;
+    padding-bottom: 22%;
+    font-size: 2em;
+    max-width: 100%;
+}
+
+#ONas {
+    text-align: center;
+    padding-top: 5%;
+    padding-bottom: 5%;
+    background: #f1f1f1;
+    font-size: 1.2em;
+}
+
+#Sluzby {
+    padding-top: 5%;
+    padding-bottom: 10%;
+    background: #e6e6e6;
+}
+
+#VycvikovaVozidla {
+    padding-top: 5%;
+    padding-bottom: 10%;
+    background: #f1f1f1;
+}
+
+#Tym {
+    text-align: center;
+    padding-top: 5%;
+    padding-bottom: 10%;
+    background: #e6e6e6;
+}
+
+#Kontakty {
+    text-align: center;
+    background: #f1f1f1;
+    padding-top: 5%;
+    padding-bottom: 5%;
+}
+
+#Kestazeni {
+    text-align: center;
+    padding-top: 5%;
+    padding-bottom: 11%;
+    background: #e6e6e6;
+}
+
+.photo-gallery .photos {
+    padding-bottom: 20px;
+}
+
+.photo-gallery .item {
+    padding-bottom: 1%;
+}
+
+#autaText {
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+#sluzbyText {
+    font-size: 1.1em;
+    margin-top: 5px;
+}
+
+#sluzby {}
+
+#sluzbyObrazek {
+    max-height: 150px;
+    max-width: 150px;
+}
+
+#collapseExample {
+    margin-top: 5px;
+}
+
+.ree ion-icon {
+    font-size: 64px;
+    padding-bottom: 15px;
+    padding-top: 25px;
+    color: #0099cc;
+}
+
+.cont ion-icon {
+    font-size: 25px;
+    color: #0099cc;
+}
+
+.modal-body li {
+    text-align: left;
+}
+
+.modal-body ul {
+    text-align: left;
+}
+
+.tcenter {
+    text-align: center;
+}
+
+.ree p {
+    font-size: 20px;
+}
+
+.maintext {
+    font-weight: 470;
+}
+
+.service {
+    margin: 10px;
+    padding: 10px;
+    border-radius: 1em;
+    background: #fff;
+    box-shadow: 0px 4px 24px rgba(0, 0, 0, 0.25);
+}
+
+.name {
+    font-size: 1.7em;
+    color: #ced6e0;
+    font-weight: 500;
+    text-transform: uppercase;
+}
+
+.btn {
+    margin: 5px;
+    /* background-color: #0099cc;
+*/
+}
+
+footer {
+    padding-top: 1%;
+    text-align: center;
+    background: #9e9e9d
+}
+
+#icons {
+    font-size: 25px;
+    padding-bottom: 15px;
+    display: inline-block;
+
+}
+
+#textInfo {
+    text-align: left;
+}
+
+.textKontakty {
+    font-size: 1.2em;
+}
+
+#iconsDownload {
+    font-size: 3em;
+}
+
+.downh {
+    color: black;
+}
+
+.downh:hover {
+    text-decoration: none;
+    color: blue;
+}
+
+.heading-line {
+    margin: 0 auto;
+    display: block;
+    height: 2px;
+    width: 140px;
+    background: #333;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+@media screen and (max-width : 450px) {
+    #autoskolalodenice {
+        width: 100%;
+        height: auto;
+        font-size: 1.5em;
+        overflow-x: hidden;
+    }
+}
+
+@media (min-width: 1700px) {
+    .titulniStrana {
+        background-size: cover;
+        height: 55vw;
+
+    }
+}
+
+/*
+@media (max-width: 1177px) {
+    .titulniStrana {
+        background-size: contain;
+        height: 55vw;
+
+    }
+}
+@media (max-width: 884px) {
+    .titulniText {
+
+
+    }
+    #autoskolalodenice {
+          font-size: 3vw; 
+        padding: 4em 2em 2em 2em;
+    }
+}*/
