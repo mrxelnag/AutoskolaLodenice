@@ -1,16 +1,7 @@
-const hamburger = document.querySelector(".hamburger");
-const navbar = document.querySelector('.navbar__links');
+$('.navTrigger').click(function () {
+  $(this).toggleClass('active');
+  console.log("Clicked menu");
+  $("#mainListDiv").toggleClass("show_list");
+  $("#mainListDiv").fadeIn();
 
-hamburger.addEventListener("click", () => {
-  hamburger.classList.toggle("active");
-  navbar.classList.toggle('active')
-});
-
-let resizeTimer;
-window.addEventListener("resize", () => {
-  document.body.classList.add("resize-animation-stopper");
-  clearTimeout(resizeTimer);
-  resizeTimer = setTimeout(() => {
-    document.body.classList.remove("resize-animation-stopper");
-  }, 400);
 });

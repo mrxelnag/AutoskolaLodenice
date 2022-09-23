@@ -5,7 +5,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/navbar.css">
     <title>Autoškola Loděnice</title>
     <!--Fonts-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -15,26 +16,54 @@
 
 <body>
     <header>
-        <nav class="navbar container">
-            <span class="navbar__logo">Navbar</span>
-            <ul class="navbar__links">
-                <li><a href="#">O Nás</a></li>
-                <li><a href="#">Ceník</a></li>
-                <li><a href="#">Vozidla</a></li>
-                <li><a href="#">Kontakt</a></li>
-                <li><a href="#">Ke Stažení</a></li>
-            </ul>
-            <button class="hamburger">
-                <div class="hamburger__line"></div>
-                <div class="hamburger__line"></div>
-                <div class="hamburger__line"></div>
-            </button>
+        <nav class="nav">
+            <div class="container">
+                <div class="logo">
+                    <a href="#">Your Logo</a>
+                </div>
+                <div id="mainListDiv" class="main_list">
+                    <ul class="navlinks">
+                        <li><a href="#">About</a></li>
+                        <li><a href="#">Portfolio</a></li>
+                        <li><a href="#">Services</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                </div>
+                <span class="navTrigger">
+                    <i></i>
+                    <i></i>
+                    <i></i>
+                </span>
+            </div>
         </nav>
+        <main id="intro" class="intro d-flex content-center">
+            <div class="intro-text">
+                <h1>Autoškola Loděnice</h1>
+                <h2>Josef Freml</h2>
+            </div>
+        </main>
     </header>
+
     <section id="intro" class="intro">
 
     </section>
+    <section id="intro" class="intro">
+
+    </section>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <!-- Navbar -->
     <script type="text/javascript" src="js/navigation.js"></script>
+    <!-- Function used to shrink nav bar removing paddings and adding black background -->
+    <script>
+        $(window).scroll(function () {
+            if ($(document).scrollTop() > 50) {
+                $('.nav').addClass('affix');
+                console.log("OK");
+            } else {
+                $('.nav').removeClass('affix');
+            }
+        });
+    </script>
 </body>
 
 </html>
