@@ -3,67 +3,200 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/main.css">
-    <link rel="stylesheet" href="css/navbar.css">
-    <title>Autoškola Loděnice</title>
+    <meta name="viewport" content="width=device-width, user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/main.css" />
     <!--Fonts-->
+    <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Nunito' rel='stylesheet'>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <!--Icons-->
+    <!-- css.gg -->
+    <link href='https://css.gg/css' rel='stylesheet'>
+
+    <!-- UNPKG -->
+    <link href='https://unpkg.com/css.gg/icons/all.css' rel='stylesheet'>
+
+    <!-- JSDelivr -->
+    <link href='https://cdn.jsdelivr.net/npm/css.gg/icons/all.css' rel='stylesheet'>
+    <!-- jQuery-->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
+    </script>
+    <title>Autoškola Loděnice</title>
 </head>
 
 <body>
     <header>
-        <nav class="nav">
-            <div class="container">
-                <div class="logo">
-                    <a href="#">Your Logo</a>
-                </div>
-                <div id="mainListDiv" class="main_list">
-                    <ul class="navlinks">
-                        <li><a href="#">About</a></li>
-                        <li><a href="#">Portfolio</a></li>
-                        <li><a href="#">Services</a></li>
-                        <li><a href="#">Contact</a></li>
-                    </ul>
-                </div>
-                <span class="navTrigger">
-                    <i></i>
-                    <i></i>
-                    <i></i>
-                </span>
+        <nav id="navigation">
+            <div class="d-flex-col content-center">
+                <a href="#" class="d-flex-col content-center">
+                    <img class="logo" src="imgs/logos/SmallLogoNavbar.png" alt="Logo Image">
+                </a>
             </div>
+            <div class="hamburger">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
+            </div>
+            <ul class="nav-links">
+                <li><a class="nav-link navHash" href="#hero">Domů</a></li>
+                <li><a class="nav-link navHash" href="#about">O Nás</a></li>
+                <li><a class="nav-link navHash" href="#price-list">Ceník</a></li>
+                <li><a class="nav-link navHash" href="#services">Služby</a></li>
+                <li><a class="nav-link navHash" href="#vehicles">Vozidla</a></li>
+                <li><a class="nav-link navHash" href="#contact">Kontakty</a></li>
+                <li><a class="nav-link navHash" href="#download">Ke Stažení</a></li>
+            </ul>
         </nav>
-        <main id="intro" class="intro d-flex content-center">
-            <div class="intro-text">
-                <h1>Autoškola Loděnice</h1>
-                <h2>Josef Freml</h2>
-            </div>
-        </main>
     </header>
-
-    <section id="intro" class="intro">
+    <section id="hero" class="d-flex-row content-center">
+        <div class="hero-wrapper d-flex-col content-center text-center">
+            <h1 class="">AUTOŠKOLA <br>Loděnice</h1>
+            <div class="intro-section">
+                <div class="intro-content">
+                    <p class="tagline">
+                        <span class="change-container">
+                            <span class="changing">Profesionalita</span>
+                            <span class="changing">Přátelský přístup</span>
+                            <span class="changing">Příprava do provozu!</span>
+                        </span>
+                    </p>
+                    <!-- social media -->
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="about" class="about d-flex-col content-center">
+        <div class="title">
+            <div class="title-wrapper d-flex-col content-center">
+                <h2 class="">O Nás!</h2>
+                <div class="underline"></div>
+            </div>
+            <p class="title-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit distinctio aut
+                doloribus velit ratione nulla saepe eaque enim totam. Maiores minima possimus culpa aut consectetur!</p>
+        </div>
+        <div class="container">
+            <div class="about-grid">
+                <div class="perk">
+                    <div class="perk perk-icon">
+                        <i class="gg-check-o"></i>
+                    </div>
+                    <h4>Individualita</h4>
+                    <p>Zaručujeme individuální přístup ke každému klientovi.</p>
+                </div>
+                <div class="perk">
+                    <div class="perk perk-icon">
+                        <i class="gg-awards"></i>
+                    </div>
+                    <h4>Profesionalita</h4>
+                    <p>V naší autoškole můžete očekávat adstandardní, přátelský a profesionální přístup respektující
+                        potřeby každého klienta. </p>
+                </div>
+                <div class="perk">
+                    <div class="perk perk-icon">
+                        <i class="gg-key"></i>
+                    </div>
+                    <h4>Vše na míru</h4>
+                    <p>Výuku a výcvik autoškoly nastavíme na míru dle Vašich potřeb.</p>
+                </div>
+                <div class="perk">
+                    <div class="perk perk-icon">
+                        <i class="gg-calendar-dates"></i>
+                    </div>
+                    <h4>Časová flexibilita</h4>
+                    <p>Kdy budete jezdit je jen na Vás, ať už o pracovních dnech, víkendech či svátcích.</p>
+                </div>
+                <div class="perk">
+                    <div class="perk perk-icon">
+                        <i class="gg-add perk-icon-style"></i>
+                    </div>
+                    <h4>Kondiční jízdy</h4>
+                    <p>Již máte řidičské oprávnění a jste si stále v něčem nejistí? Nabízíme možnost zakoupení
+                        kondičních jízd. </p>
+                </div>
+                <div class="perk">
+                    <div class="perk perk-icon">
+                        <i class="gg-tag perk-icon-style"></i>
+                    </div>
+                    <h4>Studentské výhody</h4>
+                    <p>Pro studenty nabízíme slevu na výcvik a bonusové jízdy zdrarma!</p>
+                </div>
+                <div class="perk">
+                    <div class="perk perk-icon">
+                        <i class="gg-home-alt perk-icon-style"></i>
+                    </div>
+                    <h4>Pohodlí</h4>
+                    <p>Přijedeme pro Vás do místa bydliště.</p>
+                </div>
+                <div class="perk">
+                    <div class="perk perk-icon">
+                        <i class="gg-gift perk-icon-style"></i>
+                    </div>
+                    <h4>Autoškola darem</h4>
+                    <p>Darujte výcvik jako dárek. U nás si můžete zakoupit dárkový poukaz na jakoukouliv nabízenou službu!</p>
+                </div>
+                <div class="perk">
+                    <div class="perk perk-icon">
+                        <i class="gg-arrows-exchange-alt perk-icon-style"></i>
+                    </div>
+                    <h4>Změna autoškoly</h4>
+                    <p>Nevyhovuje Vám vaše stávající autoškola? Dokončete výcvik u nás.</p>
+                </div>
+            </div>
+        </div>
 
     </section>
-    <section id="intro" class="intro">
+    <section class="price-list">
+
 
     </section>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-    <!-- Navbar -->
+    <!--HERO SECTION-->
+
+    <footer class="d-flex-row content-center">
+        <span>Copyright Jmeno © 2022</span>
+    </footer>
     <script type="text/javascript" src="js/navigation.js"></script>
-    <!-- Function used to shrink nav bar removing paddings and adding black background -->
+    <script type="text/javascript" src="js/animace.js"></script>
+    <!--Remove Hast from the link-->
     <script>
-        $(window).scroll(function () {
-            if ($(document).scrollTop() > 50) {
-                $('.nav').addClass('affix');
-                console.log("OK");
-            } else {
-                $('.nav').removeClass('affix');
+        // when the DOM is ready
+        $(document).ready(function () {
+            // get the anchor link buttons
+            const menuBtn = $('.navHash');
+            // when each button is clicked
+            menuBtn.click(() => {
+
+                setTimeout(() => {
+
+                    removeHash();
+                }, 1);
+            });
+
+            function removeHash() {
+                history.replaceState('', document.title, window.location.origin + window.location.pathname +
+                    window.location
+                    .search);
             }
         });
     </script>
+    <!-- Function used to shrink nav bar removing paddings and adding black background -->
+    <script>
+        $(window).scroll(function() {
+            if ($(document).scrollTop() > 50) {
+                $('#navigation').addClass('nav-scrolled');
+                console.log("OK");
+            } else {
+                $('#navigation').removeClass('nav-scrolled');
+            }
+        });
+    </script>
+    <!--icons-->
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 </body>
 
 </html>
