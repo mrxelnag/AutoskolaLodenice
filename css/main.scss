@@ -1,4 +1,5 @@
 @import "animace.css";
+
 :root {
     --blue-clr: #1053A4;
     --yellow-clr: #FEDE0A;
@@ -62,7 +63,7 @@ section {
     padding: 3em 0 3em 0;
 
     &:nth-of-type(odd) {
-        background-color: black;
+        background-color: rgb(23, 23, 23);
         color: #f2f5f7;
     }
 
@@ -162,6 +163,28 @@ a {
     max-width: 1200px;
     padding-inline: 2rem;
 }
+
+.gap1 {
+    gap: 1rem;
+}
+
+.gap2 {
+    gap: 2rem;
+}
+
+.gap3 {
+    gap: 3rem;
+}
+
+.gap4 {
+    gap: 4rem;
+}
+
+.space-between {
+    justify-content: space-between;
+}
+
+
 
 /*=====NAVIGATIONS=====*/
 
@@ -376,14 +399,42 @@ nav {
         // box-shadow: 0px 4px 24px rgba(0, 0, 0, 0.5);
     }
 
-    .perk-icon{
+    .perk-icon {
         color: var(--blue-clr);
     }
-    .perk h4{
+
+    .perk h4 {
         padding-bottom: 0.5rem;
     }
+
     .perk p {
         font-size: 1.2rem;
+    }
+}
+
+/*======PRICE LIST and SERVICES======*/
+.services {
+    width: 70%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    .service {}
+
+    .service-icon {}
+
+    .service-nameWrapper {}
+
+    .service-name {
+        
+    }
+
+    .service-types {
+        width: 100%
+    }
+
+    .service-type {
+        width: 100%;
+        justify-content: space-between;
     }
 }
 
@@ -463,6 +514,7 @@ nav {
         opacity: 1;
     }
 }
+
 @media screen and (max-width: 900px) {
 
     html,
@@ -470,6 +522,7 @@ nav {
         max-width: 100vw;
         overflow-x: hidden !important;
     }
+
     .title {
         .title-text {
             max-width: 80%;
@@ -477,9 +530,8 @@ nav {
     }
 }
 
-@media screen and (max-width: 750px) {
+@media screen and (max-width: 750px) {}
 
-}
 @media screen and (max-width: 700px) {
     .about-grid {
         grid-template-columns: repeat(2, 1fr);
@@ -492,6 +544,7 @@ nav {
         width: 100vw;
     }
 }
+
 @media screen and (max-width: 500px) {
     .about-grid {
         grid-template-columns: repeat(1, 1fr);

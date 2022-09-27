@@ -59,7 +59,7 @@ section {
   padding: 3em 0 3em 0;
 }
 section:nth-of-type(odd) {
-  background-color: black;
+  background-color: rgb(23, 23, 23);
   color: #f2f5f7;
 }
 section:nth-of-type(even) {
@@ -147,6 +147,26 @@ a:hover {
 .container {
   max-width: 1200px;
   padding-inline: 2rem;
+}
+
+.gap1 {
+  gap: 1rem;
+}
+
+.gap2 {
+  gap: 2rem;
+}
+
+.gap3 {
+  gap: 3rem;
+}
+
+.gap4 {
+  gap: 4rem;
+}
+
+.space-between {
+  justify-content: space-between;
 }
 
 /*=====NAVIGATIONS=====*/
@@ -352,6 +372,21 @@ nav .logo {
 }
 .about-grid .perk p {
   font-size: 1.2rem;
+}
+
+/*======PRICE LIST and SERVICES======*/
+.services {
+  width: 70%;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+}
+.services .service-types {
+  width: 100%;
+}
+.services .service-type {
+  width: 100%;
+  justify-content: space-between;
 }
 
 /*====Stying for small screens====*/
