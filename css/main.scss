@@ -160,8 +160,8 @@ a {
 }
 
 .container {
+    width: 100%;
     max-width: 1200px;
-    padding-inline: 2rem;
 }
 
 .gap1 {
@@ -418,26 +418,7 @@ nav {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 2rem;
-    .service {}
-
-    .service-icon {}
-
-    .service-nameWrapper {}
-
-    .service-name {
-        
-    }
-
-    .service-types {
-        width: 100%
-    }
-
-    .service-type {
-        width: 100%;
-        justify-content: space-between;
-    }
 }
-
 /*====Stying for small screens====*/
 @media screen and (max-width: 800px) {
     /*Styling Navigation*/

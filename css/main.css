@@ -145,8 +145,8 @@ a:hover {
 }
 
 .container {
+  width: 100%;
   max-width: 1200px;
-  padding-inline: 2rem;
 }
 
 .gap1 {
@@ -380,13 +380,6 @@ nav .logo {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 2rem;
-}
-.services .service-types {
-  width: 100%;
-}
-.services .service-type {
-  width: 100%;
-  justify-content: space-between;
 }
 
 /*====Stying for small screens====*/
