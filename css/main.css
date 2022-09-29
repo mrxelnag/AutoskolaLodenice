@@ -147,6 +147,7 @@ a:hover {
 .container {
   width: 100%;
   max-width: 1200px;
+  padding: 2rem;
 }
 
 .gap1 {
@@ -380,6 +381,26 @@ nav .logo {
   grid-template-columns: repeat(3, 1fr);
   gap: 1rem;
 }
+.services .service {
+  justify-content: start;
+  align-items: flex-start;
+  text-align: start;
+  gap: 2rem;
+  padding: 1rem 2rem;
+  background-color: var(--blue-clr);
+  border-radius: 1.2rem;
+}
+.services .service h4 {
+  font-weight: 500;
+  padding-bottom: 5px;
+}
+.services .service-icon {
+  height: 100%;
+}
+.services .service-details {
+  width: 100%;
+}
+
 /*====Stying for small screens====*/
 @media screen and (max-width: 800px) {
   /*Styling Navigation*/
