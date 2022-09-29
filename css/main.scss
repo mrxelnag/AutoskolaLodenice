@@ -414,10 +414,12 @@ nav {
 
 /*======PRICE LIST and SERVICES======*/
 .services {
-    width: 70%;
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 2rem;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    .service{
+
+    }
 }
 /*====Stying for small screens====*/
 @media screen and (max-width: 800px) {
