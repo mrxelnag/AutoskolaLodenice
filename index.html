@@ -186,16 +186,16 @@
                     <div class="service-informations">
                         <span class="modal-open">Více informací >></span>
                     </div>
-                    <div class="modal modal_multi">
+                    <div class="modal modal-multi">
 
                         <!-- Modal content -->
                         <div class="modal-content">
-                            <span class="close close_multi">×</span>
+                            <span class="close modal-close">×</span>
                             <p>Some text in the Modal..</p>
                         </div>
-                
+
                     </div>
-                
+
                 </div>
                 <div class="service d-flex-row">
                     <span class="service-icon d-flex-col content-center"><i class="gg-arrows-exchange-alt "></i></span>
@@ -238,6 +238,56 @@
     </footer>
     <script type="text/javascript" src="js/navigation.js"></script>
     <script type="text/javascript" src="js/animace.js"></script>
+    <!-- MODAL -->
+    <script>
+        // Get the modal
+
+        var modalparent = document.getElementsByClassName("modal-multi");
+
+        // Get the button that opens the modal
+
+        var modal_btn_multi = document.getElementsByClassName("modal-open");
+
+        // Get the <span> element that closes the modal
+        var span_close_multi = document.getElementsByClassName("modal-close");
+
+        // When the user clicks the button, open the modal
+        function setDataIndex() {
+
+            for (i = 0; i < modal_btn_multi.length; i++) {
+                modal_btn_multi[i].setAttribute('data-index', i);
+                modalparent[i].setAttribute('data-index', i);
+                span_close_multi[i].setAttribute('data-index', i);
+            }
+        }
+
+
+
+        for (i = 0; i < modal_btn_multi.length; i++) {
+            modal_btn_multi[i].onclick = function () {
+                var ElementIndex = this.getAttribute('data-index');
+                modalparent[ElementIndex].style.display = "block";
+            };
+
+            // When the user clicks on <span> (x), close the modal
+            span_close_multi[i].onclick = function () {
+                var ElementIndex = this.getAttribute('data-index');
+                modalparent[ElementIndex].style.display = "none";
+            };
+
+        }
+
+        window.onload = function () {
+
+            setDataIndex();
+        };
+
+        window.onclick = function (event) {
+            if (event.target === modalparent[event.target.getAttribute('data-index')]) {
+                modalparent[event.target.getAttribute('data-index')].style.display = "none";
+            }
+        }
+    </script>
     <!--Remove Hast from the link-->
     <script>
         // when the DOM is ready

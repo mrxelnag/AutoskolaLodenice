@@ -188,6 +188,7 @@ a {
 // MODALS 
 .modal {
     display: none; /* Hidden by default */
+    opacity: 0;
     position: fixed; /* Stay in place */
     z-index: 1; /* Sit on top */
     padding-top: 100px; /* Location of the box */
