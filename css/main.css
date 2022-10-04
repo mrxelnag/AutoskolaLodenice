@@ -28,6 +28,9 @@ footer {
   background-color: black;
   color: #f2f5f7;
 }
+footer a {
+  color: var(--yellow-clr);
+}
 
 h1 {
   font-size: min(8rem, 13vw);
@@ -95,7 +98,6 @@ section:nth-of-type(even) {
 
 a:link, a:visited {
   text-decoration: none;
-  color: black;
 }
 a:hover {
   color: var(--brown-clr);
@@ -145,9 +147,7 @@ a:hover {
 }
 
 .container {
-  width: 100%;
-  max-width: 1200px;
-  padding: 2rem;
+  width: min(1200px, 90vw);
 }
 
 .gap1 {
@@ -399,6 +399,12 @@ nav .logo {
 }
 .services .service-details {
   width: 100%;
+}
+.services .service-time {
+  opacity: 70%;
+}
+.services .service-informations {
+  text-align: center;
 }
 
 /*====Stying for small screens====*/
