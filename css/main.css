@@ -49,7 +49,7 @@ h3 {
 
 h4 {
   font-size: 1.6rem;
-  font-weight: 300;
+  font-weight: 400;
 }
 
 p {
@@ -168,6 +168,62 @@ a:hover {
 
 .space-between {
   justify-content: space-between;
+}
+
+dialog {
+  padding: 1rem;
+  border: 3px solid var(--blue-clr);
+  position: fixed;
+  width: min(700px, 90vw);
+  max-height: 60vh;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  overflow-y: auto;
+}
+dialog .dialog-wrapper {
+  position: relative;
+}
+dialog .dialog-close {
+  cursor: pointer;
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  font-size: 2rem;
+}
+dialog ul {
+  list-style-type: square;
+  padding-left: 14px;
+}
+dialog button {
+  float: inline-end;
+}
+dialog h3 {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+dialog .modal-wrapper {
+  gap: 2rem;
+}
+dialog button {
+  cursor: pointer;
+  border: 2px solid #131418;
+  border-radius: none;
+  background-color: var(--blue-clr);
+  color: #f2f5f7;
+  padding: 0.5rem;
+}
+
+.modal::-webkit-backdrop {
+  background-color: rgba(19, 20, 24, 0.5);
+}
+
+.modal::backdrop {
+  background-color: rgba(19, 20, 24, 0.5);
+}
+
+.modal-open {
+  cursor: pointer;
 }
 
 /*=====NAVIGATIONS=====*/

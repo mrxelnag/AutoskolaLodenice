@@ -52,7 +52,7 @@ h3 {
 
 h4 {
     font-size: 1.6rem;
-    font-weight: 300;
+    font-weight: 400;
 }
 
 p {
@@ -184,6 +184,55 @@ a {
 
 .space-between {
     justify-content: space-between;
+}
+dialog{
+    padding: 1rem;
+    border: 3px solid var(--blue-clr);
+    position: fixed;
+    width: min(700px, 90vw);
+    max-height: 60vh;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    overflow-y: auto;
+    .dialog-wrapper{
+        position: relative;
+    }
+    .dialog-close{
+        cursor: pointer;
+        position: absolute;
+        top: 0px;
+        right: 0px;
+        font-size: 2rem;
+    }
+    ul{
+        list-style-type:square;
+        padding-left: 14px;
+    }
+    button{
+        float: inline-end;
+    }
+    h3{
+        text-align: center;
+        margin-bottom: 1rem;
+    }
+    .modal-wrapper{
+        gap: 2rem
+    }
+    button{
+        cursor: pointer;
+        border: 2px solid #131418;
+        border-radius: none;
+        background-color: var(--blue-clr);
+        color: #f2f5f7;
+        padding: 0.5rem;
+    }
+}
+.modal::backdrop{
+    background-color: rgb(19, 20, 24, 0.5);
+}
+.modal-open{
+    cursor: pointer;
 }
 
 /*=====NAVIGATIONS=====*/
@@ -444,6 +493,7 @@ nav {
         text-align: center;
     }
 }
+
 /*====Stying for small screens====*/
 @media screen and (max-width: 800px) {
     /*Styling Navigation*/
