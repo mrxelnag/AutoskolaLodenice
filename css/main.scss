@@ -200,7 +200,7 @@ dialog {
     }
 
     ul {
-        list-style-type: square;
+        list-style-type:disc;
         padding-left: 14px;
     }
 
@@ -210,6 +210,7 @@ dialog {
 
     h3 {
         margin-bottom: 0.2rem;
+        font-size: min(2rem, 20vw);
     }
 
     .modal-wrapper {
@@ -598,7 +599,8 @@ nav {
         flex-wrap: wrap;
         /*  allow items to wrap  */
         justify-content: center;
-        .service{
+
+        .service {
             flex-basis: calc(40% - 20px)
         }
 
@@ -621,14 +623,27 @@ nav {
 }
 
 @media screen and (max-width: 600px) {
-    .gridWrapper {
-        width: 100vw;
+    dialog {
+        .modal-wrapper {
+            grid-template-columns: repeat(1, 1fr);
+            gap: 5px;
+        }
+        .dialog-close{
+            position: relative;
+            float: right;
+        }
     }
+
 }
 
 @media screen and (max-width: 500px) {
     .about-grid {
         grid-template-columns: repeat(1, 1fr);
 
+    }
+}
+@media screen and (max-height: 900px) {
+    dialog{
+        max-height: 80vh;
     }
 }
