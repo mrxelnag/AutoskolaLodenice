@@ -27,6 +27,7 @@ footer {
   padding: 1em 0;
   background-color: black;
   color: #f2f5f7;
+  text-align: center;
 }
 footer a {
   color: var(--yellow-clr);
@@ -180,11 +181,6 @@ dialog {
   top: 50%;
   transform: translate(-50%, -50%);
   overflow-y: auto;
-  opacity: 1;
-  transition: opacity 1s linear;
-}
-dialog .dialog-animate {
-  opacity: 0;
 }
 dialog .dialog-wrapper {
   position: relative;
@@ -546,7 +542,7 @@ body {
     grid-template-columns: repeat(2, 1fr);
   }
   .services {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(1, 1fr);
   }
 }
 @media screen and (max-width: 600px) {
