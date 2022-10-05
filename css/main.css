@@ -1,4 +1,5 @@
 @import "animace.css";
+@import "simple-lightbox.css";
 :root {
   --blue-clr: #1053A4;
   --yellow-clr: #FEDE0A;
@@ -137,6 +138,7 @@ a:hover {
 
 .container {
   width: min(1200px, 90vw);
+  margin: auto;
 }
 
 .gap1 {
@@ -453,6 +455,19 @@ nav .logo {
 }
 .services .service-informations {
   text-align: center;
+}
+
+/*=====Vehicles===*/
+.vehicles {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+.vehicles .vehicle-images {
+  gap: 1rem;
+}
+.vehicles .vehicle-image img {
+  max-width: min(250px, 20vw);
+  border: 3px solid var(--blue-clr);
 }
 
 /*====Stying for small screens====*/

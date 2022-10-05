@@ -13,3 +13,4 @@ modalClose.addEventListener('click', () => {
 modalClose2.addEventListener('click', () => {
     modal.close();
 })
+var lightbox = jQuery('.vehicle-image a').simpleLightbox({ /* options */ });

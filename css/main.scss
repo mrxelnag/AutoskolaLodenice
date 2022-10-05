@@ -1,4 +1,5 @@
 @import "animace.css";
+@import "simple-lightbox.css";
 
 :root {
     --blue-clr: #1053A4;
@@ -154,6 +155,8 @@ a {
 
 .container {
     width: min(1200px, 90vw);
+    margin: auto;
+
 }
 
 .gap1 {
@@ -200,7 +203,7 @@ dialog {
     }
 
     ul {
-        list-style-type:disc;
+        list-style-type: disc;
         padding-left: 14px;
     }
 
@@ -502,7 +505,21 @@ nav {
         text-align: center;
     }
 }
-
+/*=====Vehicles===*/
+.training{
+}
+.vehicles{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    .vehicle-images{
+        gap: 1rem;
+    }
+    .vehicle-image img{
+        max-width: min(250px, 20vw);
+        border: 3px solid var(--blue-clr);
+        
+    }
+}
 /*====Stying for small screens====*/
 @media screen and (max-width: 800px) {
     /*Styling Navigation*/
@@ -628,7 +645,8 @@ nav {
             grid-template-columns: repeat(1, 1fr);
             gap: 5px;
         }
-        .dialog-close{
+
+        .dialog-close {
             position: relative;
             float: right;
         }
@@ -642,8 +660,9 @@ nav {
 
     }
 }
+
 @media screen and (max-height: 900px) {
-    dialog{
+    dialog {
         max-height: 80vh;
     }
 }
