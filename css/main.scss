@@ -3,7 +3,10 @@
 
 :root {
     --blue-clr: #1053A4;
+    --filter-blue-clr: invert(26%) sepia(24%) saturate(4063%) hue-rotate(192deg) brightness(96%) contrast(100%);
     --yellow-clr: #FEDE0A;
+    --filter-yellow-clr: invert(81%) sepia(70%) saturate(1199%) hue-rotate(351deg) brightness(104%) contrast(99%);
+    --filter-white-clr: invert(91%) sepia(0%) saturate(7500%) hue-rotate(31deg) brightness(115%) contrast(109%);
     //icons styling
     --ggs: 1.5;
 }
@@ -44,7 +47,7 @@ h1 {
 }
 
 h2 {
-    font-size: 3rem;
+    font-size: min(4rem, 10vw);
     font-weight: 400;
 }
 
@@ -147,10 +150,6 @@ a {
 
 .text-right {
     text-align: right;
-}
-
-.icon {
-    filter: var(--brown-clr-forSVG);
 }
 
 .container {
@@ -392,7 +391,7 @@ nav {
         text-transform: none;
         word-spacing: 5px;
         text-align: center;
-        font-size: 3rem;
+        font-size: min(3rem, 7vw);
     }
 
     .changing:nth-child(1) {
@@ -449,15 +448,11 @@ nav {
     .perk-icon {
         display: flex;
         padding: 1.2rem 0.6rem;
+        color: var(--blue-clr);
         // border-radius: 100%;
         // background-color: white;
         // box-shadow: 0px 4px 24px rgba(0, 0, 0, 0.5);
     }
-
-    .perk-icon {
-        color: var(--blue-clr);
-    }
-
     .perk h4 {
         padding-bottom: 0.5rem;
     }
@@ -488,8 +483,12 @@ nav {
         padding-bottom: 5px;
     }
 
-    .service-icon {
+    .service-icon{
         height: 100%;
+        width: 45px;
+    }
+    .service-icon img{
+        filter: var(--filter-white-clr);
     }
 
     .service-details {
@@ -505,21 +504,36 @@ nav {
         text-align: center;
     }
 }
+
 /*=====Vehicles===*/
-.training{
-}
-.vehicles{
+.training {}
+
+.vehicles {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    .vehicle-images{
+
+    h3 {
+        margin-bottom: 5px;
+    }
+
+    .vehicle {
+        margin-bottom: 1rem;
+    }
+
+    .vehicle-images {
         gap: 1rem;
     }
-    .vehicle-image img{
-        max-width: min(250px, 20vw);
-        border: 3px solid var(--blue-clr);
-        
+
+    .vehicle-image img {
+        max-width: min(270px, 20vw);
+        border: 3px solid #131418;
+        border-radius: 1rem;
+        box-shadow: 0px -1px 11px 2px rgba(0, 0, 0, 0.21);
+        -webkit-box-shadow: 0px -1px 11px 2px rgba(0, 0, 0, 0.21);
+        -moz-box-shadow: 0px -1px 11px 2px rgba(0, 0, 0, 0.21);
     }
 }
+
 /*====Stying for small screens====*/
 @media screen and (max-width: 800px) {
     /*Styling Navigation*/
@@ -624,6 +638,12 @@ nav {
     }
 }
 
+@media screen and (max-height: 900px) {
+    dialog {
+        max-height: 80vh;
+    }
+}
+
 @media screen and (max-width: 750px) {}
 
 @media screen and (max-width: 700px) {
@@ -652,17 +672,20 @@ nav {
         }
     }
 
+    .vehicles {
+        grid-template-columns: repeat(1, 1fr);
+
+        .vehicle-image img {
+            max-width: min(270px, 40vw);
+
+        }
+    }
+
 }
 
 @media screen and (max-width: 500px) {
     .about-grid {
         grid-template-columns: repeat(1, 1fr);
 
-    }
-}
-
-@media screen and (max-height: 900px) {
-    dialog {
-        max-height: 80vh;
     }
 }
