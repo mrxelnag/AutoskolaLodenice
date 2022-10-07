@@ -564,7 +564,7 @@ nav {
         --ggs: 0.6
     }
 
-    .contact-details span {
+    .contact-details .contact-detail {
         display: flex;
         justify-content: center;
         align-items: center;
@@ -583,6 +583,7 @@ nav {
         
         padding: 1rem;
         border-radius: 50%;
+      
     }
 
     .freml {
