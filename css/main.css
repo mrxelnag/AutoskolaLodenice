@@ -457,7 +457,7 @@ nav .logo {
 }
 .services .service-icon img {
   filter: var(--filter-white-clr);
-  height: 50px;
+  height: min(3rem, 10vw);
 }
 .services .service-details {
   width: 100%;
