@@ -47,8 +47,8 @@ h1 {
 }
 
 h2 {
-    font-size: min(4rem, 10vw);
-    font-weight: 400;
+    font-size: min(4rem, 9vw);
+    font-weight: 500;
 }
 
 h3 {
@@ -612,7 +612,8 @@ nav {
         margin-bottom: 10px;
     }
     .downloads-files{
-        gap: 2rem
+        gap: 2rem;
+        flex-direction: column;
     }
     .downloads-filesWrapper{
         text-align: center;
