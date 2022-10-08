@@ -613,7 +613,6 @@ nav {
     }
     .downloads-files{
         gap: 2rem;
-        flex-direction: column;
     }
     .downloads-filesWrapper{
         text-align: center;
@@ -785,6 +784,11 @@ nav {
         .dialog-close {
             position: relative;
             float: right;
+        }
+    }
+    .downloads-wrapper{
+        .downloads-files{
+            flex-direction: column;
         }
     }
     

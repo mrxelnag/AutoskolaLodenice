@@ -551,7 +551,6 @@ nav .logo {
 }
 .downloads-wrapper .downloads-files {
   gap: 2rem;
-  flex-direction: column;
 }
 .downloads-wrapper .downloads-filesWrapper {
   text-align: center;
@@ -692,6 +691,9 @@ body {
   dialog .dialog-close {
     position: relative;
     float: right;
+  }
+  .downloads-wrapper .downloads-files {
+    flex-direction: column;
   }
   .vehicles {
     grid-template-columns: repeat(1, 1fr);
