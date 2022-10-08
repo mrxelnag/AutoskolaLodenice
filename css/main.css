@@ -48,7 +48,7 @@ h2 {
 }
 
 h3 {
-  font-size: 2rem;
+  font-size: min(2rem, 8vw);
   font-weight: 400;
 }
 
@@ -105,7 +105,7 @@ a:link, a:visited {
   text-decoration: none;
 }
 a:hover {
-  color: var(--brown-clr);
+  color: var(--blue-clr);
 }
 
 .d-flex-row {
@@ -495,12 +495,11 @@ nav .logo {
 .contacts-wrapper {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 60px;
+  gap: 3rem;
 }
 .contacts-wrapper .contact {
   padding: 0.8rem;
   gap: 1rem;
-  width: 100%;
   border-radius: 10PX;
   box-shadow: 0px -1px 11px 2px rgba(0, 0, 0, 0.8);
   -webkit-box-shadow: 0px -1px 11px 2px rgba(0, 0, 0, 0.8);
@@ -509,7 +508,7 @@ nav .logo {
 .contacts-wrapper i {
   --ggs: 0.6 ;
 }
-.contacts-wrapper .contact-details span {
+.contacts-wrapper .contact-details .contact-detail {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -541,6 +540,52 @@ nav .logo {
   height: 100%;
 }
 
+/*====Downloads====*/
+.downloads-wrapper {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 1rem;
+}
+.downloads-wrapper h3 {
+  margin-bottom: 10px;
+}
+.downloads-wrapper .downloads-files {
+  gap: 2rem;
+}
+.downloads-wrapper .downloads-filesWrapper {
+  text-align: center;
+}
+.downloads-wrapper .downloads-file {
+  width: 150px;
+  height: 50px;
+  padding: 0.5rem;
+  text-align: center;
+  border: 2px solid var(--blue-clr);
+  border-radius: 10px;
+  box-shadow: 0px -1px 11px 2px rgba(0, 0, 0, 0.2);
+  -webkit-box-shadow: 0px -1px 11px 2px rgba(0, 0, 0, 0.2);
+  -moz-box-shadow: 0px -1px 11px 2px rgba(0, 0, 0, 0.2);
+}
+.downloads-wrapper ul {
+  margin-left: 15px;
+}
+.downloads-wrapper ul li {
+  text-decoration: none;
+  list-style: disc;
+}
+.downloads-wrapper a {
+  transition: 0.5s ease-in;
+  font-weight: 500;
+}
+.downloads-wrapper a:link, .downloads-wrapper a:visited {
+  color: #131418;
+  cursor: pointer;
+}
+.downloads-wrapper a:hover {
+  color: var(--blue-clr);
+  text-decoration: underline;
+}
+
 /*====Stying for small screens====*/
 @media screen and (max-width: 1100px) {
   html,
@@ -561,9 +606,10 @@ body {
     flex-basis: calc(40% - 20px);
   }
 }
-@media screen and (max-height: 900px) {
-  dialog {
-    max-height: 80vh;
+@media screen and (max-width: 950px) {
+  .contacts-wrapper {
+    grid-template-columns: repeat(1, 1fr);
+    gap: 20px;
   }
 }
 @media screen and (max-width: 800px) {
@@ -656,5 +702,28 @@ body {
 @media screen and (max-width: 500px) {
   .about-grid {
     grid-template-columns: repeat(1, 1fr);
+  }
+  .contact {
+    flex-direction: column;
+  }
+  .contact-details {
+    width: 100%;
+  }
+  .contact-name {
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+  .contact-freml {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+  .contact-details-item {
+    flex-direction: row-reverse;
+  }
+}
+@media screen and (max-height: 900px) {
+  dialog {
+    max-height: 80vh;
   }
 }/*# sourceMappingURL=main.css.map */
