@@ -177,13 +177,12 @@ a:hover {
 dialog {
   padding: 1rem;
   border: 3px solid var(--blue-clr);
-  position: fixed;
-  width: min(700px, 90vw);
+  width: min(700px, 80vw);
   max-height: 60vh;
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
-  overflow-y: auto;
+  overflow-y: scroll;
 }
 dialog .dialog-wrapper {
   position: relative;
