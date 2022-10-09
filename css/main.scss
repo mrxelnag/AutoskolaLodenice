@@ -187,6 +187,9 @@ a {
 .space-between {
     justify-content: space-between;
 }
+.nobreak{
+    white-space: nowrap;
+}
 
 dialog {
     padding: 1rem;
@@ -220,7 +223,7 @@ dialog {
         float: inline-end;
     }
 
-    h3 {
+    h3, h3 span{
         margin-bottom: 0.2rem;
         font-size: min(2rem, 20vw);
     }

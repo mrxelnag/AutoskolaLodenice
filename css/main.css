@@ -170,6 +170,10 @@ a:hover {
   justify-content: space-between;
 }
 
+.nobreak {
+  white-space: nowrap;
+}
+
 dialog {
   padding: 1rem;
   border: 3px solid var(--blue-clr);
@@ -198,7 +202,7 @@ dialog ul {
 dialog button {
   float: inline-end;
 }
-dialog h3 {
+dialog h3, dialog h3 span {
   margin-bottom: 0.2rem;
   font-size: min(2rem, 20vw);
 }
