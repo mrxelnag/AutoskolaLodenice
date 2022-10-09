@@ -196,14 +196,14 @@ dialog {
     border: 3px solid var(--blue-clr);
     width: min(700px, 80vw);
     max-height: 60vh;
-    // position: fixed;
+    position: fixed;
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
-    overflow-y: scroll;
 
     .dialog-wrapper {
         position: relative;
+        overflow-y: scroll;
     }
 
     .dialog-close {
