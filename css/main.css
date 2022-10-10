@@ -187,9 +187,11 @@ dialog {
       scroll-snap-type: y mandatory;
   overflow-y: scroll;
 }
+dialog .scroll-snap-start {
+  scroll-snap-align: start;
+}
 dialog .dialog-wrapper {
   position: relative;
-  scroll-snap-align: start;
 }
 dialog .dialog-close {
   cursor: pointer;
