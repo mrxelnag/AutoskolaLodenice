@@ -6,8 +6,12 @@ const dialogWrapper = document.querySelector('#dialog-wrapper')
 
 modalOpen.addEventListener('click', (event) => {
     modal.showModal();
-    dialogWrapper.classList.remove('scroll-snap-start');
-    // modal.scrollTop = 0;
+
+    setTimeout(function () {
+        $('#dialog-wrapper').removeClass("scroll-snap-start");
+    }, 1000);
+
+    modal.scrollTop = 0;
 })
 modalClose.addEventListener('click', () => {
     modal.close();
