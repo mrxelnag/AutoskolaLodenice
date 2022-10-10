@@ -5,7 +5,7 @@ const modal = document.querySelector('#modal')
 
 modalOpen.addEventListener('click', (event) => {
     modal.showModal();
-    modal.scrollTop = 0;
+    // modal.scrollTop = 0;
 })
 modalClose.addEventListener('click', () => {
     modal.close();

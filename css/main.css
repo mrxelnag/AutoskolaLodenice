@@ -183,10 +183,13 @@ dialog {
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
+  -ms-scroll-snap-type: y mandatory;
+      scroll-snap-type: y mandatory;
+  overflow-y: scroll;
 }
 dialog .dialog-wrapper {
   position: relative;
-  overflow-y: scroll;
+  scroll-snap-align: start;
 }
 dialog .dialog-close {
   cursor: pointer;
@@ -202,7 +205,8 @@ dialog ul {
 dialog button {
   float: inline-end;
 }
-dialog h3, dialog h3 span {
+dialog h3,
+dialog h3 span {
   margin-bottom: 0.2rem;
   font-size: min(2rem, 20vw);
 }
@@ -583,7 +587,8 @@ nav .logo {
   transition: 0.5s ease-in;
   font-weight: 500;
 }
-.downloads-wrapper a:link, .downloads-wrapper a:visited {
+.downloads-wrapper a:link,
+.downloads-wrapper a:visited {
   color: #131418;
   cursor: pointer;
 }
