@@ -183,12 +183,6 @@ dialog {
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
-  -ms-scroll-snap-type: y mandatory;
-      scroll-snap-type: y mandatory;
-  overflow-y: scroll;
-}
-dialog .scroll-snap-start {
-  scroll-snap-align: start;
 }
 dialog .dialog-wrapper {
   position: relative;
@@ -204,9 +198,6 @@ dialog ul {
   list-style-type: disc;
   padding-left: 14px;
 }
-dialog button {
-  float: inline-end;
-}
 dialog h3,
 dialog h3 span {
   margin-bottom: 0.2rem;
@@ -218,7 +209,8 @@ dialog .modal-wrapper {
   gap: 2rem;
   margin-bottom: 20px;
 }
-dialog button {
+dialog .modal-close2 {
+  float: inline-end;
   cursor: pointer;
   border: 2px solid #131418;
   border-radius: none;
