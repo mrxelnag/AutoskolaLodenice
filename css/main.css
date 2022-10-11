@@ -296,12 +296,8 @@ nav .logo {
   margin: 5px;
   transition: all 0.3s ease;
 }
-.hamburger .line1,
-.hamburger .line3 {
-  background: var(--yellow-clr);
-}
-.hamburger .line2 {
-  background: var(--blue-clr);
+.hamburger .line {
+  background-color: #f2f5f7;
 }
 
 /*Animating Hamburger Icon on Click*/
@@ -557,6 +553,7 @@ nav .logo {
 }
 .downloads-wrapper .downloads-files {
   gap: 2rem;
+  flex-wrap: wrap;
 }
 .downloads-wrapper .downloads-filesWrapper {
   text-align: center;

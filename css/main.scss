@@ -323,14 +323,10 @@ nav {
         transition: all 0.3s ease;
     }
 
-    .line1,
-    .line3 {
-        background: var(--yellow-clr);
+    .line{
+        background-color: #f2f5f7;
     }
-
-    .line2 {
-        background: var(--blue-clr);
-    }
+   
 }
 
 /*Animating Hamburger Icon on Click*/
@@ -618,6 +614,7 @@ nav {
 
     .downloads-files {
         gap: 2rem;
+        flex-wrap: wrap;
     }
 
     .downloads-filesWrapper {
