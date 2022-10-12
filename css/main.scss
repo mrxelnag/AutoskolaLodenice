@@ -192,7 +192,8 @@ a {
     white-space: nowrap;
 }
 
-dialog {
+
+.modal {
     padding: 1rem;
     border: 3px solid var(--blue-clr);
     width: min(700px, 80vw);
@@ -200,7 +201,14 @@ dialog {
     position: fixed;
     left: 50%;
     top: 50%;
-    transform: translate(-50%, -50%); 
+    transform: translate(-50%, -50%);
+    z-index: 100;
+    background-color: #f2f5f7;
+    color: #131418;
+    display: none;
+    -webkit-box-shadow: 0px 0px 300px 200px rgba(0,0,0,0.58);
+-moz-box-shadow: 0px 0px 300px 200px rgba(0,0,0,0.58);
+box-shadow: 0px 0px 300px 200px rgba(0,0,0,0.58);
     .dialog-wrapper {
         position: relative;
     }
@@ -240,7 +248,9 @@ dialog {
         padding: 0.5rem;
     }
 }
-
+.dialog-open{
+    display: block;
+}
 .modal::backdrop {
     background-color: rgb(19, 20, 24, 0.5);
 }
@@ -786,7 +796,7 @@ nav {
 }
 
 @media screen and (max-width: 600px) {
-    dialog {
+    .modal {
         .modal-wrapper {
             grid-template-columns: repeat(1, 1fr);
             gap: 5px;
@@ -847,7 +857,7 @@ nav {
 }
 
 @media screen and (max-height: 900px) {
-    dialog {
+    .modal {
         max-height: 80vh;
     }
 }

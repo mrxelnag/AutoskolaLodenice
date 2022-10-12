@@ -175,7 +175,7 @@ a:hover {
   white-space: nowrap;
 }
 
-dialog {
+.modal {
   padding: 1rem;
   border: 3px solid var(--blue-clr);
   width: min(700px, 80vw);
@@ -184,33 +184,38 @@ dialog {
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
+  z-index: 100;
+  background-color: #f2f5f7;
+  color: #131418;
+  display: none;
+  box-shadow: 0px 0px 300px 200px rgba(0, 0, 0, 0.58);
 }
-dialog .dialog-wrapper {
+.modal .dialog-wrapper {
   position: relative;
 }
-dialog .dialog-close {
+.modal .dialog-close {
   cursor: pointer;
   position: absolute;
   top: 0px;
   right: 0px;
   font-size: 2rem;
 }
-dialog ul {
+.modal ul {
   list-style-type: disc;
   padding-left: 14px;
 }
-dialog h3,
-dialog h3 span {
+.modal h3,
+.modal h3 span {
   margin-bottom: 0.2rem;
   font-size: min(2rem, 20vw);
 }
-dialog .modal-wrapper {
+.modal .modal-wrapper {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 2rem;
   margin-bottom: 20px;
 }
-dialog .modal-close2 {
+.modal .modal-close2 {
   float: inline-end;
   cursor: pointer;
   border: 2px solid #131418;
@@ -218,6 +223,10 @@ dialog .modal-close2 {
   background-color: var(--blue-clr);
   color: #f2f5f7;
   padding: 0.5rem;
+}
+
+.dialog-open {
+  display: block;
 }
 
 .modal::-webkit-backdrop {
@@ -689,11 +698,11 @@ body {
   }
 }
 @media screen and (max-width: 600px) {
-  dialog .modal-wrapper {
+  .modal .modal-wrapper {
     grid-template-columns: repeat(1, 1fr);
     gap: 5px;
   }
-  dialog .dialog-close {
+  .modal .dialog-close {
     position: relative;
     float: right;
   }
@@ -731,7 +740,7 @@ body {
   }
 }
 @media screen and (max-height: 900px) {
-  dialog {
+  .modal {
     max-height: 80vh;
   }
 }/*# sourceMappingURL=main.css.map */

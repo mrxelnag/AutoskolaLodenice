@@ -239,7 +239,8 @@
             <div class="service-informations d-flex-col content-center">
                 <span>---</span>
                 <span class="modal-open animeClass animeScaleIn">Více informací >></span>
-                <dialog class="modal" id="modal">
+                <!-- It was DIALOG before, safary does not support it yet. -->
+                <div class="modal" id="modal">
                     <div class="dialog-wrapper" id="dialog-wrapper">
                         <span class="dialog-close modal-close1">x</span>
                         <div class="dialog-service-information">
@@ -299,7 +300,7 @@
                         </div>
                         <span class="modal-close2">Zpět</span>
                     </div>
-                </dialog>
+                </div>
             </div>
         </div>
     </section>
